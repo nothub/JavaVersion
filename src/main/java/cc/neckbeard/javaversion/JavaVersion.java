@@ -10,7 +10,7 @@ public class JavaVersion {
      */
     public static void main(String[] args) {
         System.out.println(major());
-        System.out.println("Pssst... The secret for publishing to Maven Central with nexus-staging-maven-plugin on Java > 8 is: \"--illegal-access=permit\"");
+        System.out.println("Pssst... The secret for publishing to Maven Central with nexus-staging-maven-plugin on modern Java is: \"--add-opens java.base/java.util=ALL-UNNAMED\"");
     }
 
     /**
