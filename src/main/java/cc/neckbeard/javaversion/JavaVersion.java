@@ -10,7 +10,13 @@ public class JavaVersion {
      */
     public static void main(String[] args) {
         System.out.println(major());
-        System.out.println("Pssst... The secret for publishing to Maven Central with nexus-staging-maven-plugin on modern Java is: \"--add-opens java.base/java.util=ALL-UNNAMED\"");
+        System.out.println("""
+            Pssst... The secret for publishing to Maven Central with org.sonatype.plugins:nexus-staging-maven-plugin:1.6.8 on modern Java is:
+            add-opens hack to allow deployment with (.mvn/jvm.config)
+            --add-opens java.base/java.lang.reflect=ALL-UNNAMED
+            --add-opens java.base/java.text=ALL-UNNAMED
+            --add-opens java.base/java.util=ALL-UNNAMED
+            --add-opens java.desktop/java.awt.font=ALL-UNNAMED""");
     }
 
     /**
