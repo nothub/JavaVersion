@@ -5,13 +5,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cc.neckbeard</groupId>
-  <artifactId>maven-central-template</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <artifactId>JavaVersion</artifactId>
+  <version>2.0.0</version>
   <packaging>jar</packaging>
 
-  <name>${project.artifactId}</name>
-  <description>Template for Java 16 Maven projects. Includes Maven Central deployment configuration.</description>
-  <url>https://github.com/nothub/maven-central-template</url>
+  <name>${project.groupId}:${project.artifactId}</name>
+  <description>This is a Hello World project. If this is on Maven Central, I managed to deploy it using Java 16.</description>
+  <url>https://github.com/nothub/JavaVersion</url>
 
   <properties>
     <java.version>16</java.version>
@@ -48,14 +48,14 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/nothub/maven-central-template.git</connection>
-    <developerConnection>scm:git:ssh://github.com/nothub/maven-central-template.git</developerConnection>
-    <url>https://github.com/nothub/maven-central-template</url>
+    <connection>scm:git:git://github.com/nothub/JavaVersion.git</connection>
+    <developerConnection>scm:git:ssh://github.com/nothub/JavaVersion.git</developerConnection>
+    <url>https://github.com/nothub/JavaVersion</url>
   </scm>
 
   <issueManagement>
     <system>GitHub Issues</system>
-    <url>https://github.com/nothub/maven-central-template/issues</url>
+    <url>https://github.com/nothub/JavaVersion/issues</url>
   </issueManagement>
 
   <pluginRepositories>
@@ -103,13 +103,6 @@
       <version>5.8.0-M1</version>
       <scope>test</scope>
     </dependency>
-    <!-- may be needed if dependencies provide an old version
-    <dependency>
-      <groupId>org.junit.vintage</groupId>
-      <artifactId>junit-vintage-engine</artifactId>
-      <version>5.8.0-M1</version>
-      <scope>test</scope>
-    </dependency> -->
   </dependencies>
 
   <distributionManagement>
@@ -258,14 +251,12 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>cc.neckbeard.app.App</mainClass>
+              <mainClass>cc.neckbeard.javaversion.JavaVersion</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
-          <!-- <finalName>${project.artifactId}-${project.version}-release</finalName>
-          <appendAssemblyId>false</appendAssemblyId> -->
         </configuration>
       </plugin>
       <plugin>
